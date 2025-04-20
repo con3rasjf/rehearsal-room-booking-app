@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rehearsal-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/con3rasjf/helm-chart-reservas-app.git'
+    targetRevision: develop
+    path: charts/rehearsal
+    helm:
+      valueFiles:
+        - ../../environments/dev/values.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: rehearsal-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
