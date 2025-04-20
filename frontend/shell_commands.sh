@@ -7,9 +7,9 @@ npm install react-big-calendar axios moment
 #Build image
 docker build -t frontend .
 #Tag image
-docker tag frontend:latest con3rasjf/frontend:v3
+docker tag frontend:latest con3rasjf/frontend:v4
 #Push image to Docker Hub
-docker push con3rasjf/frontend:v3
+docker push con3rasjf/frontend:v4
 
 #Create deployment and service
 kubectl apply -f deployment.yaml

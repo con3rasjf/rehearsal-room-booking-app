@@ -11,7 +11,7 @@ spec:
     path: charts/rehearsal
     helm:
       valueFiles:
-        - ../../environments/dev/values.yaml
+        - values-dev.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: rehearsal-dev

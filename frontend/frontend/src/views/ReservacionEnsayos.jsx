@@ -8,7 +8,7 @@ const ReservacionEnsayos = () => {
     <div >
       <div>
         <h1>
-          Reservación de Ensayos
+          Reservación de Ensayos - v2
         </h1>
         <DateTimePicker />
       </div>
